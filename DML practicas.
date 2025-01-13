@@ -1,0 +1,3 @@
+Al usuario la nomenclatura de las tablas no le han gustado. Cambie en la tabla de DEPARTAMENTO  el nombre del campo ciudad_departamento a ciudad.
+ALTER TABLE DEPARTAMENTO
+RENAME COLUMN CIUDAD_DEPARTAMENTO TO CIUDAD;
