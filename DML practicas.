@@ -58,4 +58,3 @@ Si quisieramos cambiar el el precio de un producto con id 90467829 que codigo us
 
 UPDATE PRODUCTOS SET PRECIO=10,50 
 WHERE ID_PRODUCTO = 90467829;
-
