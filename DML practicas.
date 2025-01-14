@@ -48,3 +48,14 @@ P0008;PROYECTO;P0008;25000,00;14/03/2018;D0003
 P0009;PROYECTO;P0009;12000,00;13/07/2021;D0003
 P0010;PROYECTO;P0010;21000,00;08/10/2019;D0004
 P0011;PROYECTO;P0011;39000,00;30/01/2021;D0005
+
+Para la clase 04 usaremos los tipo test de la misma por falta de ejercicios.
+Se ha terminado el año y hemos de agregar 1 año mas a todos los empleados.  Que comando podriamos usar?
+
+UPDATE EMPLEADOS SET EDAD = EDAD+1;
+
+Si quisieramos cambiar el el precio de un producto con id 90467829 que codigo usariamos?
+
+UPDATE PRODUCTOS SET PRECIO=10,50 
+WHERE ID_PRODUCTO = 90467829;
+
