@@ -58,3 +58,13 @@ Si quisieramos cambiar el el precio de un producto con id 90467829 que codigo us
 
 UPDATE PRODUCTOS SET PRECIO=10,50 
 WHERE ID_PRODUCTO = 90467829;
+
+El presupuesto del año fue ejecutado y los proyectos tuvieron reajustados sus presupuestos, algunos para mas otros para menos y algunos nada.usando la tabla obtenida cree un comando update para actualizar la tabla de proyectos.
+
+UPDATE PROYECTOS P
+SET P.PRESUPUESTO = P.PRESUPUESTO(
+SELECT PP.PORCENTAJE_VARIACION FROM PROYECTO_PRESUPUESTO
+WHERE P.COD_PROYECTO = PP.COD_PROYECTO)
+WHERE EXISTS (SELECT 1 FROM PROYECTO_PRESUPUESTO PP
+WHERE P.COD_PROYECTO = PP.COD_PROYECTO);
+
