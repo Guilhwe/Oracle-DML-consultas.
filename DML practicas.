@@ -87,4 +87,18 @@ SELECT E.ID_FUNCIONARIO FROM ENCARGADOS E
 INNER JOIN FUNCIONARIOS_DESPEDIDOS FD
 ON E.ID_FUNCIONARIO = FD.ID_FUNCIONARIO);
 
+EJERCICIO FINAL CURSO
+En la tabla ofrecida tenenmos el presupuesto por funcionario de cada departamento.
+Queremos crear triggers para que los datos sean guardados en una tabla con los campos DEPARTAMENTO y VALOR, sean siempre actualizados.
+--Numero de empleados por departamentos
+SELECT D.ID_DEPARTAMENTO ,COUNT(*) AS TOTAL_FUNCIONARIOS
+FROM DEPARTAMENTO D
+INNER JOIN
+FUNCIONARIOS F
+ON D.ID_DEPARTAMENTO =F.ID_DEPARTAMENTO
+GROUP BY D.ID_DEPARTAMENTO;
 
+--total presupuesto por departamento
+SELECT P.ID_DEPARTAMENTO, SUM(P.PRESUPUESTO)AS PRESUPUESTO_DEPARTAMENTO
+FROM PROYECTOS P
+GROUP BY  P.ID_DEPARTAMENTO;
